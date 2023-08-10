@@ -1,0 +1,51 @@
+<ion-header>
+  <div class="titulo-header">
+  <h1>Mis Clases</h1>
+</div>
+<div class="cerrar-sesion">
+  <img src="assets/img/logout.png" (click)="logout()">
+</div>
+
+</ion-header>
+<!----cierre div header-->
+
+<ion-content>   <!--- *ngFor="let clases of asignaturas"  -->
+    <ion-accordion-group *ngFor="let clases of asignaturas"><!-- aqui va el famoso ngFor -->
+      <ion-accordion value="1">
+        <ion-item slot="header" class="medium" >
+          <ion-label >{{clases.nombre_asigna}}</ion-label>
+        </ion-item>
+        <div class="ion-padding" slot="content">
+          <button id="boton" style="width:100%" [disabled]="isDisabled == true" (click)="setOpen(true, clases.sigla)">Iniciar clase</button>
+        </div>
+      </ion-accordion>
+
+    </ion-accordion-group>
+  
+    
+
+  <ion-modal [isOpen]="isModalOpen">
+
+    <ng-template>
+
+      <div id="color-header">
+
+        <div class="boton-atras">
+          <img src="assets/img/atras.png" (click)="setClose(false)">
+        </div>
+        <!---cierre boton atras -->
+        <h2>Código QR</h2>
+
+      </div>
+      <!--cierre header-->
+
+
+      <ion-content class="ion-padding">
+        <ngx-qrcode [elementType]="elementType"  [value]="value"></ngx-qrcode>
+
+        <p>{{value}}</p>
+
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+</ion-content>

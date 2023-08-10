@@ -1,0 +1,57 @@
+ion-input{
+  padding: 0 10px 0 0;
+
+}
+#botoncito{
+  width: 120px;
+  border-radius: 18px;
+  padding: 12px;
+  font-size: 15px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin: 15px 10px 10px 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#iconos{
+  width: 50%;
+  height: auto;
+  margin: 10px 0 0 0;
+  padding: 0;
+  float: inline-end;
+  display: flex;
+  align-items: flex-end;
+}
+
+#iconos img{
+  width: 60px;
+  height: auto;
+  margin: 0;
+  padding: 0 15px 0 0;
+}
+
+#formulario{
+  padding: 0 15px 0 0 ;
+
+}
+.verde{
+    background-color: #0b8b67;
+  }
+  
+.morado{
+    background-color: #6f42c1;
+  }
+.azul{
+    background-color: #004b9c;
+  }
+
+#centrar-botoncitos{
+    text-align: center;
+  
+}
+#lista-usuarios{
+  width: auto;
+  height: auto;
+  padding: 10px;
+}

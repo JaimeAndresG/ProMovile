@@ -1,0 +1,30 @@
+<ion-header>
+  <div class="titulo-header">
+  <h1>Error 404 Digimon</h1>
+</div>
+<div class="cerrar-sesion">
+  <img src="assets/img/logout.png" (click)="logout()">
+</div>
+
+</ion-header>
+
+  
+
+<ion-content>
+<!-- <img src="assets/img/404.jpg"> -->
+
+<section>
+  <ion-list *ngFor="let d of dataDigimones"  >
+    <ion-item >
+      <ul class="digiapi">
+        <li><img src="{{d.img}}"></li>
+        <li><ion-label >Nombre Digimon: {{d.name}} </ion-label></li>        
+        <li><ion-label >Nivel : {{d.level}}</ion-label></li>       
+        
+    </ul>
+
+  </ion-item>
+</ion-list>
+</section>
+</ion-content>
+

@@ -1,0 +1,74 @@
+ion-content{
+    --background: var(--ion-background-color);
+    --color: var(--ion-text-color, #000);
+    --padding-top: 0px;
+    --padding-bottom: 0px;
+    --padding-start: 0px;
+    --padding-end: 0px;
+    --keyboard-offset: 0px;
+    --offset-top: 0px;
+    --offset-bottom: 0px;
+    --overflow: auto;
+    display: block;
+    position: relative;
+    flex: 1 1 0%;
+    width: 100%;
+    height: 100%;
+    margin: 0px !important;
+    padding: 0px !important;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../login/img/duocpuente2.jpg);
+    width: 100%;
+    height:95vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    contain: size style;
+  }
+
+ion-card{
+    --background: var(--ion-card-background, var(--ion-item-background, var(--ion-background-color)));
+    --color: var(--ion-card-color, var(--ion-item-color,));
+    box-shadow:none;
+    
+  } 
+  ion-item{
+    --background: var(--ion-card-background, var(--ion-item-background, var(--ion-background-color)));
+    --color: var(--ion-card-color, var(--ion-item-color, var(--ion-color-step-550)));
+    
+  } 
+
+
+#centrar-contenido{
+    width: 100vh;
+    height: auto;
+    margin: 15px auto 0 auto;
+    background-color: rgb(255, 255, 255,0.9);
+    border-radius: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+
+#centrar-contenido img{    
+    width:150px;
+    margin-top: 10px;
+    padding: 0;
+}
+ion-card-content,ion-item{
+  margin: 0 !important;
+  padding: 0!important;
+
+}
+
+#separacion{
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 10px;
+
+}
+
+h3{
+font-size: 20px;
+margin-top: 13px;
+
+}

@@ -1,0 +1,37 @@
+<ion-tabs>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="perfil/{{usuario.rut}}">
+      <img src="assets/img/perfil.png" id="iconos-tabs">
+      <ion-label>Perfil</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="escanear/{{usuario.rut}}" *ngIf="usuario.tipo_usuario == 'alumno'">
+        <img src="assets/img/Escanear-codigo.png" id="iconos-tabs">
+    <ion-label>Escanear</ion-label>  
+    </ion-tab-button>
+    
+    <ion-tab-button tab="asistencia" *ngIf="usuario.tipo_usuario == 'alumno'">
+      <img src="assets/img/asistencia.png" id="iconos-tabs">
+      <ion-label>Asistencia</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="asignatura" *ngIf="usuario.tipo_usuario == 'administrador'">
+      <img src="assets/img/clases.png" id="iconos-tabs">
+      <ion-label>Asignaturas</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="administrar" *ngIf="usuario.tipo_usuario == 'administrador'">
+      <img src="assets/img/administrar.png" id="iconos-tabs">
+      <ion-label>Administrar</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="clases/{{usuario.rut}}" *ngIf="usuario.tipo_usuario == 'docente'">
+      <img src="assets/img/clases.png" id="iconos-tabs">
+      <ion-label>Clases</ion-label>
+    </ion-tab-button>
+
+    
+  </ion-tab-bar>
+
+</ion-tabs>

@@ -1,0 +1,144 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: 3dventure;
+    src: url(../src/assets/font/3Dventure.ttf);
+}
+
+ion-header{
+    width: 100%;
+    height: 70px;
+    margin: 0px;
+    padding: 0px;
+    background-color: #004b9c; ///color header    
+    color: aliceblue;
+    text-align: center;
+
+}
+.titulo-header{
+    width: 70%;
+    height: auto;
+    margin:15px 0 0 8%;
+    padding: 0;
+    float:left;
+/*     background-color: #6f42c1; */
+}
+////el titulo del header
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    margin:0px 0 0 15%;
+    text-align: center;
+    font-weight: bold;
+    
+
+}
+.cerrar-sesion{
+    max-width: 60px;
+    margin: 5px 5px 0 0 ;
+    padding: 5px;
+    float: right;
+   /*  background-color: aqua;
+     */
+}
+
+#color-header{
+    margin: 0px;
+    padding: 0px;
+    background-color: #004b9c; ///color header 
+    width: 100%;
+    height: 70px;
+    color: aliceblue;
+    text-align: center;
+}
+
+#color-header img{
+    width: 230px;
+    margin: 12px 0 10px 0;
+    padding: 0;
+}
+
+#boton{
+    background-color: #6f42c1;
+    width: 150px;
+    border-radius: 18px;
+    padding: 10px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    margin: 15px 0 10px 0;
+    font-weight: 600;
+    
+}
+
+
+//variable de mi aplicacion, hay que importar al css que afectara @use 'ruta'
+
+#modificar-perfil{
+    background-color: #6f42c1;
+    border-radius: 25px;
+    padding: 15px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin: 15px 0 10px 0;
+    font-weight: bold;
+    font-size:18px;
+    
+}   
+
+#iconos-tabs{
+    width: 30px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    
+    }
+    
+#tabs{
+        width: 100%;
+        height: 120px;
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        background-color: black;
+    }
+
+
+@media(max-width: 576px){
+
+    .responsive{
+        width: 90% !important;
+        height: auto;
+    }
+
+    .responsive-img{
+        width: 40% !important;
+    }
+    
+}   
+

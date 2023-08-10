@@ -1,0 +1,35 @@
+
+#iconos-tabs{
+width: 28px;
+height: auto;
+margin: 0;
+padding: 0px 0 0 0; 
+
+}
+
+#tabs{
+    width: 100%;
+    height: 130px;
+    margin: 0;
+    padding: 10px 0;
+    position: fixed;
+}
+
+ion-tab-bar{
+--background: #004b9c;
+}
+
+ion-tab-button{
+--button-color-activated: #fff;
+
+}
+
+ion-label {
+    color: #fff;
+    
+
+}
+ion-label:hover {
+    color: rgb(219, 219, 219);
+   
+}

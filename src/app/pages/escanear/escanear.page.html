@@ -1,0 +1,17 @@
+<ion-header>
+  <div class="titulo-header">
+  <h1>Escanear código</h1>
+</div>
+<div class="cerrar-sesion">
+  <img src="assets/img/logout.png" (click)="logout()">
+</div>
+
+</ion-header>
+<!----cierre div header-->
+
+<ion-content>
+  <div id="codigo-qr">
+    <ion-input placeholder="Ingrese código QR" [(ngModel)]="codigo" ></ion-input>
+    <button id="boton" (click)="presenteFire()">Presente!</button>
+  </div>
+</ion-content>

@@ -1,0 +1,42 @@
+
+
+
+.digiapi{
+  display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+  }
+
+
+.digiapi li {
+  padding: 0 30px;
+  flex-basis: 33%;
+  text-align: center;
+  padding: 10px;
+}
+
+.digiapi img{
+    width: 200px;
+    height: auto;
+    margin: 0 ;
+    min-width: 200px;
+    transform:
+    rotateX(0deg)
+    rotateZ(0deg);
+    transform-style: preserve-3d;  
+    transition:
+    .5s ease-in-out transform;
+
+}
+.digiapi img:hover{
+    transform:translate3d(0px, -16px, 0px)
+      rotateX(0deg)
+      rotateY(180deg); 
+}
+

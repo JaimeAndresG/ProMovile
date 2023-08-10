@@ -1,0 +1,22 @@
+<ion-header>
+  <div class="titulo-header">
+  <h1>Recuperar Contraseña</h1>
+</div>
+<div class="cerrar-sesion">
+  <img src="assets/img/logout.png" (click)="logout()">
+</div>
+
+</ion-header><!----cierre div header-->
+
+<ion-content>
+<div id="contenido">
+  <div>
+    <img src="assets/img/olvido-pass.png">
+  </div><!--cierre div imagen-->
+  
+    <ion-label position="stacked">Ingrese correo</ion-label>
+    <ion-input placeholder="Ingrese Correo Confirmación" type="mail" [(ngModel)]="correo"></ion-input>
+    <button id="boton" (click)="recuperar()">Enviar</button>
+  
+</div><!------cierre div contenido----->
+</ion-content>

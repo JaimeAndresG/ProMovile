@@ -1,0 +1,52 @@
+<ion-content>
+
+  <div id="color-header">
+
+    <div id="registrapp">
+      <img src="assets/img/registrApp2.png">
+    </div>
+  </div>
+  <!----cierre div header-->
+
+
+  <div class="responsive" id="centrar-contenido" overflow-scroll="true">
+
+    <div id="login-img">
+      <img class="responsive-img" src="assets/img/login.png" />
+    </div>
+    <!---div imagen-->
+
+    <form [formGroup]="usuario" (ngSubmit)="loginFire()">
+      <ion-card>
+        
+          <h3>Ingrese sus datos</h3>
+       
+        <ion-card-content>
+          <ion-item>
+            <ion-label position="stacked">Correo</ion-label>
+            <ion-input formControlName="correo" type="text" placeholder="Ingrese correo"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="stacked">Contraseña</ion-label>
+            <ion-input formControlName="clave" type="password" placeholder="Ingrese clave"></ion-input>
+          </ion-item>
+          <button id="boton" type="submit" [disabled]="!usuario.valid">Ingresar</button>
+        </ion-card-content>
+      </ion-card>
+    </form>
+    
+
+    <div id="separacion">
+      <a routerLink='/registrar'>¿No tienes cuenta?</a>
+    </div>
+    <!--------cierre div registrar--------->
+    <div id="separacion">
+      <a routerLink='/recuperar-pass'>¿Has olvidado tu contraseña?</a>
+    </div>
+
+  </div>
+  <!-------cierre div centrar contenido------>
+
+
+</ion-content>
+<!---div cierre fondo-->

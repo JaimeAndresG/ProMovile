@@ -1,0 +1,58 @@
+<ion-header>
+  <div class="titulo-header">
+  <h1>Registrarse</h1>
+</div>
+<div class="cerrar-sesion">
+  <img src="assets/img/logout.png" (click)="logout()">
+</div>
+
+</ion-header><!----cierre div header-->
+
+<ion-content>
+  <div id="centrar-contenido">
+    <form [formGroup]="perso" (ngSubmit)="agregarRegistrar()">
+      
+      <ion-input formControlName="id"  hidden="false"></ion-input>
+      <ion-input formControlName="is_logged"  hidden="false"></ion-input>
+
+      <ion-item>
+        <ion-label position="stacked">Rut</ion-label>
+        <ion-input type="text" placeholder="Ingrese rut con puntos y guión" formControlName="rut"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Nombre </ion-label>
+        <ion-input type="text" placeholder="Ingrese nombre" formControlName="nom"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Apellido </ion-label>
+        <ion-input type="text" placeholder="Ingrese nombre" formControlName="ape"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Correo</ion-label>
+        <ion-input type="mail" placeholder="Ej : juanitperez@gmail.com" formControlName="correo"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Fecha nacimiento</ion-label>
+        <ion-input [max]="today" displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" type="date" placeholder="Ingrese fecha nacimiento" formControlName="fecha_nac"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Semestre</ion-label>
+        <ion-input type="number" placeholder="Ingrese semestre" formControlName="semestre"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="stacked">Contraseña</ion-label>
+        <ion-input type="password" placeholder="Ingrese contraseña" formControlName="clave"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Repita Contraseña</ion-label>
+        <ion-input type="password" placeholder="Ingrese nuevamente contraseña" [(ngModel)]="verificar_password" [ngModelOptions]="standalone"></ion-input>
+      </ion-item>
+     <div id="botoncito">
+      <button type="submit" [disabled]="!perso.valid"  id="boton">Registrar</button> 
+    </div>
+    </form>
+  
+   
+  </div><!-----cierre div centrado contenido-->
+</ion-content>

@@ -1,0 +1,96 @@
+
+<ion-header>
+  <div class="titulo-header">
+  <h1>Administrador</h1>
+</div>
+<div class="cerrar-sesion">
+  <img src="assets/img/logout.png" (click)="logout()">
+</div>
+
+</ion-header>
+<!----cierre div header--> 
+
+<ion-content >
+  <form [formGroup]="perso" (ngSubmit)="agregarFire()">
+
+    <ion-input formControlName="id"  hidden="false"></ion-input>
+    <ion-input formControlName="is_logged"  hidden="false"></ion-input>
+
+    <ion-item>
+      <ion-label position="stacked">Rut</ion-label>
+      <ion-input type="text"  placeholder="Ingrese rut con puntos y guión" formControlName="rut"></ion-input>
+      <ion-note slot="error">Rut Incorrecto</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Nombre</ion-label>
+      <ion-input type="text" placeholder="Ingrese nombre" formControlName="nom"></ion-input>
+      <ion-note slot="error">Nombre Incorrecto</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Apellido</ion-label>
+      <ion-input type="text" placeholder="Ingrese Apellido" formControlName="ape"></ion-input>
+      <ion-note slot="error">Apellido Obligatorio</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Correo</ion-label>
+      <ion-input type="mail" placeholder="Ej : juanitperez@duocuc.cl" formControlName="correo"></ion-input>
+      <ion-note slot="error">Correo Obligatorio</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Fecha nacimiento</ion-label>
+      <ion-input [max]="today" displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY" type="date" placeholder="Ingrese fecha nacimiento" formControlName="fecha_nac"></ion-input>
+      <ion-note slot="error">Fecha Obligatorio</ion-note>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Tipo de usuario</ion-label>
+        <ion-select placeholder="Elija una opción" formControlName="tipo_usuario">
+          <ion-select-option value="alumno">Alumno</ion-select-option>
+          <ion-select-option value="docente">Docente</ion-select-option>
+          <ion-select-option value="administrador">Administrador</ion-select-option>
+        </ion-select>
+      </ion-item>      
+    </ion-list>
+   
+    <ion-item *ngIf="perso.value.tipo_usuario == 'alumno'">
+      <ion-label position="stacked">Semestre</ion-label>
+      <ion-input type="number" placeholder="Ingrese semestre" formControlName="semestre"></ion-input>
+      <ion-note slot="error">Semestre Obligatorio</ion-note>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="stacked">Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese contraseña" formControlName="clave"></ion-input>
+      
+      <ion-note slot="error">Contraseña obligatoria</ion-note>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Repita Contraseña</ion-label>
+      <ion-input type="password" placeholder="Ingrese nuevamente contraseña" [(ngModel)]="verificar_password" [ngModelOptions]="standalone"></ion-input>
+      <ion-note slot="error">Repita Contraseña obligatoria</ion-note>
+    </ion-item>
+  
+  <div id="centrar-botoncitos" >
+    <button id="botoncito" class="azul" type="submit" [disabled]="!perso.valid">REGISTRAR</button>    
+    <ion-button id="botoncito" color="boton" class="morado" (click)="modificarFire()">MODIFICAR</ion-button>
+    <button id="botoncito" class="verde" type="reset">LIMPIAR</button>
+  </div>
+</form>
+
+  <div id="lista-usuarios" >
+    <h2>LISTA DE USUARIOS</h2>
+    <ion-list *ngFor="let usuario of usuarios" >
+      <hr>
+      <ion-item>
+        <p>Rut: {{usuario.rut}} <br>Correo: {{usuario.correo}} <br>Nombre: {{usuario.nom}}<br>Apellido: {{usuario.ape}}<br>Fecha nacimiento: {{usuario.fecha_nac}}<br>Semestre: {{usuario.semestre}}<br>Tipo usuario: {{usuario.tipo_usuario}} </p>
+      </ion-item>
+      <div id="iconos" (click)="buscarFire(usuario.id)"><img src="assets/img/buscar.png">Buscar</div>
+      <div id="iconos" (click)="eliminarFire(usuario.id)"><img src="assets/img/eliminar.png">Eliminar</div>  
+        
+    </ion-list>
+
+  </div>
+  
+</ion-content>
+

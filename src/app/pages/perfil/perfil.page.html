@@ -1,0 +1,54 @@
+<ion-header>
+  <div class="titulo-header">
+  <h1>Mi perfil</h1>
+</div>
+<div class="cerrar-sesion">
+  <img src="assets/img/logout.png" (click)="logout()">
+</div>
+
+</ion-header>
+<!-- <div id="color-header">
+    
+    <div class="cerrar-sesion">
+      <img src="assets/img/logout.png" slot="end" (click)="logout()">
+    </div>cierre cerrar sesion
+      <h1>Mi Perfil</h1>
+  
+  </div>----cierre div header-->  
+
+<ion-content>
+  <div id="margen-contenido">
+    <div class="fondo-contenido">
+      <div class="img-alumno" *ngIf="usuario.tipo_usuario == 'alumno'">
+        <img src="assets/img/perfil-alumno.png" width="120px">
+      </div><!------cierre imagen perfil-->
+      <div class="img-alumno" *ngIf="usuario.tipo_usuario == 'docente'">
+        <img src="assets/img/perfil-docente.png" width="120px">
+      </div><!------cierre imagen perfil-->
+      <div class="img-alumno" *ngIf="usuario.tipo_usuario == 'administrador'">
+        <img src="assets/img/perfil-admin.png" width="120px">
+      </div><!------cierre imagen perfil-->
+      <b><p>{{usuario.nom}} {{usuario.ape}}</p></b>
+      <hr>
+        <div id="informacion-perfil">        
+        <p>Rut: {{usuario.rut}} </p>
+        <p>Fecha Nacimiento: {{usuario.fecha_nac}}</p>
+        <p *ngIf="usuario.tipo_usuario == 'alumno'">Semestre: {{usuario.semestre}}</p>
+        <p>Correo: {{usuario.correo}}</p>
+        <p>Tipo usuario: {{usuario.tipo_usuario}}</p>
+        
+      </div><!---cuerre div informacion perfil-->
+      <hr>
+        <button id="modificar-perfil">EDITAR</button>
+       
+
+    
+  </div><!---cierre fondo contenido-->
+  
+  </div><!---cierre div contenido-->
+</ion-content>
+
+
+
+
+

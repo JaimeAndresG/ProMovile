@@ -1,0 +1,68 @@
+<ion-header>
+  <div class="titulo-header">
+  <h1>Asignatura</h1>
+</div>
+<div class="cerrar-sesion">
+  <img src="assets/img/logout.png" (click)="logout()">
+</div>
+
+</ion-header>
+<!----cierre div header-->
+<ion-content>
+  <!--<ion-searchbar placeholder="Buscar asignatura"></ion-searchbar>
+  <button id="boton" style="width:100%">Buscar</button>-->
+  
+
+   <form [formGroup]="asignatura" (ngSubmit)="agregarFireAsi()" >
+    <ion-input formControlName="id"  hidden="false"></ion-input>
+    <ion-item>
+      <ion-label position="stacked">Código asignatura</ion-label>
+      <ion-input type="number" formControlName="cod_asignatura" ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Nombre Asignatura</ion-label>
+      <ion-input type="text" formControlName="nombre_asigna" ></ion-input>
+    </ion-item>    
+
+    <ion-item>
+      <ion-label position="stacked">Sigla Asignatura</ion-label>
+      <ion-input type="text" formControlName="sigla"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Escuela</ion-label>
+      <ion-input type="text" placeholder="Ej: Escuela de informática" formControlName="escuela"></ion-input>
+    </ion-item>
+
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Personas</ion-label>
+        <ion-select placeholder="Elija una opción" formControlName="rut_docente">
+          <ion-select-option *ngFor="let p of usuarios" value="{{p.rut}}">{{p.nom}} {{p.ape}}</ion-select-option>
+        </ion-select>
+      </ion-item>      
+    </ion-list>
+
+   
+    <div id="centrar-botoncitos" >
+      <button id="botoncito" class="azul" type="submit" [disabled]="!asignatura.valid">REGISTRAR</button>    
+      <ion-button id="botoncito" class="morado" color="boton" (click)="modificarFire()">MODIFICAR</ion-button>
+      <button id="botoncito" class="verde" type="reset">LIMPIAR</button>
+    </div>
+
+   </form>
+
+   <div id="lista-usuarios" >
+    <h2>LISTA DE ASIGNATURAS</h2>
+    <ion-list *ngFor="let a of asignaturas" >
+      <hr>
+      <ion-item>
+        <p>Código: {{a.cod_asignatura}} <br>Nombre Asignatura: {{a.nombre_asigna}}<br>Sigla: {{a.sigla}}<br>Escuela: {{a.escuela}}<br>Rut Docente: {{a.rut_docente}} </p>
+      </ion-item>
+      <div id="iconos" (click)="buscarFire(a.id)"  ><img src="assets/img/buscar.png">Buscar</div>
+      <div id="iconos" (click)="eliminarFire(a.id)"><img src="assets/img/eliminar.png">Eliminar</div>
+        
+    </ion-list>
+  </div>
+</ion-content>
