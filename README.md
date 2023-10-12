@@ -6,9 +6,9 @@ Registraap: Durante mi formación academica , creé una aplicación móvil en Ty
 # Algunas imagenes
 
 * Login Principal y adaptado a celulares
-  ![Login Registrapp](https://github.com/JaimeAndresG/ProMovile/assets/101838917/1a011dba-4471-46c8-b8aa-7452baaddd05)
+![Login Registrapp](https://github.com/JaimeAndresG/ProMovile/assets/101838917/1a011dba-4471-46c8-b8aa-7452baaddd05)
 
 * Registro de los datos de los alumnos 
-  ![Registro alumnos](https://github.com/JaimeAndresG/ProMovile/assets/101838917/f7959afe-358d-4cf3-acf7-80029eeaa672)
+![Registro alumnos](https://github.com/JaimeAndresG/ProMovile/assets/101838917/f7959afe-358d-4cf3-acf7-80029eeaa672)
 
 
