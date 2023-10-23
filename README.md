@@ -1,6 +1,6 @@
 # ProMovile
 
-Registraap: Durante mi formación academica , creé una aplicación móvil en TypeScript utilizando dos frameworks específicos, Ionic y Angular. Su principal objetivo es registrar alumnos y docentes. A través de un administrador, los alumnos son asignados a un docente. Además, el docente tiene la capacidad de crear una clase y generar un código QR. Los alumnos deben copiar este código en sus perfiles para estar presentes en la clase del docente. Para gestionar la base de datos, utilicé Firebase, una base de datos no relacional.
+Durante el transcurso de mi formación académica, desarrollé una aplicación móvil en TypeScript (RegistrApp), empleando dos marcos de trabajo específicos, Ionic y Angular. El propósito principal de esta aplicación radica en la gestión de registros de alumnos y docentes. A través de un módulo de administrador, se lleva a cabo la asignación de docentes a sus respectivos alumnos. Adicionalmente, se otorga al docente la capacidad de crear clases y generar códigos QR exclusivos. Estos códigos QR deben ser replicados por los alumnos en sus perfiles para indicar su presencia en la clase del respectivo docente. Para la gestión de la base de datos, opté por emplear Firebase, una plataforma de base de datos no relacional.
 
 
 # Algunas imagenes
