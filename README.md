@@ -17,5 +17,9 @@ Durante el transcurso de mi formación académica, desarrollé una aplicación m
 
   ![Formulario Web](https://github.com/JaimeAndresG/ProMovile/assets/101838917/017709d2-3f20-4950-b257-0e0b2139b2d4)
 
+* Una vez validadas las credenciales, cada usuario puede acceder a su propio perfil con su respectiva información personal. La diferencia radica en las pestañas o 'tabs', ya que cada tipo de usuario, ya sea Administrador, Docente o Alumno, tiene su propio conjunto de pestañas, como se muestra en el siguiente ejemplo.
+  ![Perfil](https://github.com/JaimeAndresG/ProMovile/assets/101838917/99e6454f-e5a4-425d-9417-17035080744b)
+
+
 
 
