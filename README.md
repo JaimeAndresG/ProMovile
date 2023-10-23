@@ -12,10 +12,9 @@ Durante el transcurso de mi formación académica, desarrollé una aplicación m
   ![Registro alumnos](https://github.com/JaimeAndresG/ProMovile/assets/101838917/f7959afe-358d-4cf3-acf7-80029eeaa672)
 
 * En la modalidad web, la interfaz presenta diferencias notables tanto en el proceso de inicio de sesión como en el formulario de ingreso de datos.
-* Login
+* Login y Formulario
   ![Login Web](https://github.com/JaimeAndresG/ProMovile/assets/101838917/022ed4bf-1b25-4149-9ede-a3e79260ecbd)
 
-* Formulario
   ![Formulario Web](https://github.com/JaimeAndresG/ProMovile/assets/101838917/017709d2-3f20-4950-b257-0e0b2139b2d4)
 
 
